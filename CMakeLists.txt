@@ -19,59 +19,59 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS PrintSupport)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS PrintSupport)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        Source/main.cpp
+        Source/mainwindow.cpp
+        Source/mainwindow.h
+        Source/mainwindow.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Dispensa
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        about.cpp
-        about.h
-        about.ui
-        connessione.cpp
-        connessione.h
-        controlli.cpp
-        controlli.h
-        dati.cpp
-        dati.h
-        datiini.cpp
-        datiini.h
-        gestione.cpp
-        gestione.h
-        gestione.ui
-        initia.cpp
-        initia.h
-        initia.ui
-        listaspesa.cpp
-        listaspesa.h
-        listaspesa.ui
-        messaggi.cpp
-        messaggi.h
-        movimenta.cpp
-        movimenta.h
-        movimenta.ui
-        prodotti.cpp
-        prodotti.h
-        prodotti.ui
-        situazdisp.cpp
-        situazdisp.h
-        situazdisp.ui
-        tools.cpp
-        tools.h
-        tools.ui
-        toolsmod.cpp
-        toolsmod.h
-        toolsmod.ui
-        visualelenco.cpp
-        visualelenco.h
-        visualelenco.ui
-        visualizza.cpp
-        visualizza.h
-        visualizza.ui
+        Source/about.cpp
+        Source/about.h
+        Source/about.ui
+        Source/connessione.cpp
+        Source/connessione.h
+        Source/controlli.cpp
+        Source/controlli.h
+        Source/dati.cpp
+        Source/dati.h
+        Source/datiini.cpp
+        Source/datiini.h
+        Source/gestione.cpp
+        Source/gestione.h
+        Source/gestione.ui
+        Source/initia.cpp
+        Source/initia.h
+        Source/initia.ui
+        Source/listaspesa.cpp
+        Source/listaspesa.h
+        Source/listaspesa.ui
+        Source/messaggi.cpp
+        Source/messaggi.h
+        Source/movimenta.cpp
+        Source/movimenta.h
+        Source/movimenta.ui
+        Source/prodotti.cpp
+        Source/prodotti.h
+        Source/prodotti.ui
+        Source/situazdisp.cpp
+        Source/situazdisp.h
+        Source/situazdisp.ui
+        Source/tools.cpp
+        Source/tools.h
+        Source/tools.ui
+        Source/toolsmod.cpp
+        Source/toolsmod.h
+        Source/toolsmod.ui
+        Source/visualelenco.cpp
+        Source/visualelenco.h
+        Source/visualelenco.ui
+        Source/visualizza.cpp
+        Source/visualizza.h
+        Source/visualizza.ui
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Dispensa APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
