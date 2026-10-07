@@ -1,4 +1,4 @@
-/* Copyright 2024 LoboBlanco761
+/* Copyright 2024 LoboBlanco761<waltgiri@proton.me>
  * This file is part of Dispensa.
 
     Dispensa is free software: you can redistribute it and/or modify
