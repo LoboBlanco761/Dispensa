@@ -16,6 +16,7 @@
 */
 #include "controlli.h"
 #include "messaggi.h"
+#include <QCoreApplication>
 
 Controlli::Controlli() {}
 
@@ -27,7 +28,7 @@ QString Controlli::contrCat(QString categoria)
         ef = "n";
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Categoria obbligatoria";
+        QString stringa = QCoreApplication::translate("Controlli", "Categoria obbligatoria");
         m->messaggio(fl,stringa);
     }
     return ef;
@@ -41,7 +42,7 @@ QString Controlli::contrProd(QString prod)
         ef = "n";
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Prodotto obbligatorio";
+        QString stringa = QCoreApplication::translate("Controlli", "Prodotto obbligatorio");
         m->messaggio(fl,stringa);
     }
     return ef;
@@ -55,7 +56,7 @@ QString Controlli::contrQta(QString qtas)
     if(qtas.isEmpty()) {
         ef = "n";
         QString fl = "a";
-        QString stringa = "Inserire Quantità";
+        QString stringa = QCoreApplication::translate("Controlli","Inserire Quantità");
         m->messaggio(fl,stringa);
     }
     if(ef == "y") {
@@ -63,7 +64,7 @@ QString Controlli::contrQta(QString qtas)
         int qta = qtas.toInt(&ok);
         if(!ok) {
             QString fl = "a";
-            QString stringa = "Quantità non numerica";
+            QString stringa = QCoreApplication::translate("Controlli","Quantità non numerica");
             m->messaggio(fl,stringa);
             ef = "n";
         }
@@ -80,14 +81,14 @@ QString Controlli::contrMov(QString qtasPrel,QString qtasDep)
     Messaggi *m = new Messaggi();
     if((qtasPrel.isEmpty()) && (qtasDep.isEmpty())) {
         QString fl = "a";
-        QString stringa = "Nessuna Movimentazione";
+        QString stringa = QCoreApplication::translate("Controlli","Nessuna Movimentazione");
         m->messaggio(fl,stringa);
         ef = "n";
     }
     if(ef == "y") {
         if((!qtasPrel.isEmpty()) && (!qtasDep.isEmpty())) {
             QString fl = "a";
-            QString stringa = "Possibile una sola Movimentazione";
+            QString stringa = QCoreApplication::translate("Controlli","Possibile una sola Movimentazione");
             m->messaggio(fl,stringa);
             ef = "n";
         }
@@ -97,7 +98,7 @@ QString Controlli::contrMov(QString qtasPrel,QString qtasDep)
             int qtaPrel = qtasPrel.toInt(&ok);
             if(!ok) {
                 QString fl = "a";
-                QString stringa = "Quantità prelevata non numerica";
+                QString stringa = QCoreApplication::translate("Controlli","Quantità prelevata non numerica");
                 m->messaggio(fl,stringa);
                 ef = "n";
             }
@@ -108,7 +109,7 @@ QString Controlli::contrMov(QString qtasPrel,QString qtasDep)
             int qtaDep = qtasDep.toInt(&ok);
             if(!ok) {
                 QString fl = "a";
-                QString stringa = "Quantità depositata non numerica";
+                QString stringa = QCoreApplication::translate("Controlli","Quantità depositata non numerica");
                 m->messaggio(fl,stringa);
                 ef = "n";
             }
@@ -125,7 +126,7 @@ QString Controlli::contrMovLog(int qta,int qtaPrel)
     if(qtaPrel > qta) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Quantità Prelevata maggiore di quantità dispensa";
+        QString stringa = QCoreApplication::translate("Controlli","Quantità Prelevata maggiore di quantità dispensa");
         m->messaggio(fl,stringa);
         ef = "n";
     }
@@ -139,7 +140,7 @@ QString Controlli::contrModProd(QString categoria,QString prod)
     if((categoria.isEmpty()) && (prod.isEmpty())) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Nessuna Modifica";
+        QString stringa = QCoreApplication::translate("Controlli","Nessuna Modifica");
         m->messaggio(fl,stringa);
         ef = "n";
     }
