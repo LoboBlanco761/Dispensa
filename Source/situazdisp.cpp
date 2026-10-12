@@ -46,7 +46,7 @@ void SituazDisp::settaPannello()
     if(matrice.isEmpty()) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Non sono presenti prodotti in Dispensa";
+        QString stringa = (tr("Non sono presenti prodotti in Dispensa"));
         m->messaggio(fl,stringa);
     } else {
         for(int i = 0;i<matrice.size();i++) {
@@ -115,11 +115,11 @@ QVariant TestModel::headerData(int section, Qt::Orientation orientation, int rol
 {
     if (role == Qt::DisplayRole && orientation == Qt::Horizontal) {
         if (section == 0) {
-            return QString("Categoria");
+            return QString(tr("Categoria"));
         } else if (section == 1) {
-            return QString("Prodotto");
+            return QString(tr("Prodotto"));
         } else if (section == 2) {
-            return QString("Quantità");
+            return QString(tr("Quantità"));
         }
     }
     return QVariant();

@@ -37,12 +37,12 @@ void ToolsMod::settaPannello(QString param,QString cat,QString prod)
 {
     ui->label->setText(param);
     if(param == "Modifica Categoria") {
-        ui->label_2->setText("Categoria : "+cat+" - Inserisci Modifica :");
+        ui->label_2->setText(tr("Categoria : ")+cat+(tr(" - Inserisci Modifica :")));
         ui->label_3->setVisible(false);
         ui->lineEdit_3->setVisible(false);
     } else {
-        ui->label_2->setText("Categoria : "+cat+" - Inserisci Modifica :");
-        ui->label_3->setText("Prodotto : "+prod+" - Inserisci Modifica :");
+        ui->label_2->setText(tr("Categoria : ")+cat+(tr(" - Inserisci Modifica :")));
+        ui->label_3->setText(tr("Prodotto : ")+prod+(tr(" - Inserisci Modifica :")));
     }
 }
 

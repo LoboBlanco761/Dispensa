@@ -42,17 +42,17 @@ void Tools::settaPannello(QString param)
     Dati *d = new Dati();
     QStringList matrice;
     if((param == "Elimina Categoria") || (param == "Modifica Categoria")) {
-        ui->label_2->setText("Seleziona Categoria");
+        ui->label_2->setText(tr("Seleziona Categoria"));
         matrice = d->listaCat(db);
     }
     if((param == "Elimina Prodotto") || (param == "Modifica Prodotto")) {
-        ui->label_2->setText("Seleziona Prodotto");
+        ui->label_2->setText(tr("Seleziona Prodotto"));
         matrice = d->listaProd(db);
     }
     if((param == "Elimina Categoria") || (param == "Elimina Prodotto"))
-        ui->pushButton_2->setText("Elimina");
+        ui->pushButton_2->setText(tr("Elimina"));
     if((param == "Modifica Categoria") || (param == "Modifica Prodotto"))
-        ui->pushButton_2->setText("Modifica");
+        ui->pushButton_2->setText(tr("Modifica"));
     caricaLista(matrice);
     delete(d);
     db.close();
@@ -64,7 +64,7 @@ void Tools::caricaLista(QStringList matrice)
     if(matrice.isEmpty()) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Nessun risultato";
+        QString stringa = (tr("Nessun risultato"));
         m->messaggio(fl,stringa);
         ui->pushButton_2->setEnabled(false);
     } else {
@@ -91,7 +91,7 @@ void Tools::on_pushButton_2_clicked()
     if (name_sel.isEmpty()) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Nessuna Selezione";
+        QString stringa = (tr("Nessuna Selezione"));
         m->messaggio(fl,stringa);
     } else {
         param = ui->label->text();
@@ -111,9 +111,9 @@ void Tools::on_pushButton_2_clicked()
         if(param == "Elimina Categoria"){
             ef = d->cancCat(db,id);
             if(ef == "y") {
-                stringa = "Eliminazione Categoria avvenuta con Successo";
+                stringa = (tr("Eliminazione Categoria avvenuta con Successo"));
             } else {
-                stringa = "Eliminazione Categoria Fallita";
+                stringa = (tr("Eliminazione Categoria Fallita"));
             }
         }
         if(param == "Modifica Categoria") {
@@ -131,17 +131,17 @@ void Tools::on_pushButton_2_clicked()
                 ef = d->modCat(db,id,cat);
             }
             if(ef == "y") {
-                stringa = "Modifica Categoria avvenuta con Successo";
+                stringa = (tr("Modifica Categoria avvenuta con Successo"));
             } else {
-                stringa = "Modifica Categoria Fallita";
+                stringa = (tr("Modifica Categoria Fallita"));
             }
         }
         if(param == "Elimina Prodotto") {
             ef = d->cancProd(db,id);
             if(ef == "y") {
-                stringa = "Eliminazione Prodotto avvenuta con Successo";
+                stringa = (tr("Eliminazione Prodotto avvenuta con Successo"));
             } else {
-                stringa = "Eliminazione Prodotto Fallita";
+                stringa = (tr("Eliminazione Prodotto Fallita"));
             }
         }
         if(param == "Modifica Prodotto") {
@@ -159,9 +159,9 @@ void Tools::on_pushButton_2_clicked()
                 ef = d->modProd(db,id,cat,prod);
             }
             if(ef == "y") {
-                stringa = "Modifica Prodotto avvenuta con Successo";
+                stringa = (tr("Modifica Prodotto avvenuta con Successo"));
             } else {
-                stringa = "Modifica Prodotto Fallita";
+                stringa = (tr("Modifica Prodotto Fallita"));
             }
         }
         d->cancTemp(db);

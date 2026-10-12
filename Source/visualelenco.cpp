@@ -39,7 +39,7 @@ void VisualElenco::settaPannello(QString param)
     QSqlDatabase db = c->conn();
     Dati *d = new Dati();
     if(param == "tutto") {
-        ui->label->setText("Elenco Generale");
+        ui->label->setText(tr("Elenco Generale"));
         ui->label_2->setVisible(false);
         ui->label_3->setVisible(false);
         ui->line_2->setVisible(false);
@@ -49,14 +49,14 @@ void VisualElenco::settaPannello(QString param)
         if(matrice.isEmpty()) {
             Messaggi *m = new Messaggi();
             QString fl = "a";
-            QString stringa = "Non sono presenti Prodotti";
+            QString stringa = (tr("Non sono presenti Prodotti"));
             m->messaggio(fl,stringa);
         } else {
             QString elenco = matrice.join("\n");
             ui->textBrowser->setPlainText(elenco);
         }
     } else {
-        ui->label->setText("Elenco Categoria");
+        ui->label->setText(tr("Elenco Categoria"));
         QStringList matrice = d->preCarCat(db);
         caricaCombo(matrice);
         ui->textBrowser->setVisible(false);
@@ -82,7 +82,7 @@ void VisualElenco::on_pushButton_3_clicked()
 void VisualElenco::on_pushButton_2_clicked()
 {
     QString categoria = ui->comboBox->currentText();
-    ui->label_3->setText("Categoria : "+categoria);
+    ui->label_3->setText(tr("Categoria : ")+categoria);
     ui->textBrowser->setVisible(true);
     Connessione *c = new Connessione();
     QSqlDatabase db = c->conn();
@@ -91,7 +91,7 @@ void VisualElenco::on_pushButton_2_clicked()
     if(matrice.isEmpty()) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Non sono presenti Prodotti in questa categoria";
+        QString stringa = (tr("Non sono presenti Prodotti in questa categoria"));
         m->messaggio(fl,stringa);
     } else {
         QString elenco = matrice.join("\n");
