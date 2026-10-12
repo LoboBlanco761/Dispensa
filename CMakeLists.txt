@@ -17,6 +17,8 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Multimedia)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Multimedia)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS PrintSupport)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS PrintSupport)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS LinguistTools)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS LinguistTools)
 
 set(PROJECT_SOURCES
         Source/main.cpp
@@ -72,6 +74,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Source/visualizza.cpp
         Source/visualizza.h
         Source/visualizza.ui
+        Source/Resources.qrc
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Dispensa APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
@@ -95,6 +98,15 @@ target_link_libraries(Dispensa PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(Dispensa PRIVATE Qt${QT_VERSION_MAJOR}::Sql)
 target_link_libraries(Dispensa PRIVATE Qt${QT_VERSION_MAJOR}::Multimedia)
 target_link_libraries(Dispensa PRIVATE Qt${QT_VERSION_MAJOR}::PrintSupport)
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt_add_translations(Dispensa
+        TS_FILES
+            translations/Dispensa_en.ts
+            translations/Dispensa_fr.ts
+            translations/Dispensa_es.ts
+    )
+    endif()
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
