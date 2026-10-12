@@ -63,6 +63,7 @@ void MainWindow::testInit()
     QTextStream in(&file_i);
     QString line = in.readLine();
     process_line(line);
+    file_i.close();
     if(line == "N") {
         Initia *i = new Initia();
         i->setAttribute(Qt::WA_DeleteOnClose);

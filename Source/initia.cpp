@@ -48,8 +48,8 @@ void Initia::on_pushButton_2_clicked()
     QString currentExecDir(QCoreApplication::applicationDirPath());
     if(ef == "y") {
         QFile file_i (currentExecDir+"/init.dat");
-        file_i.remove();
-        file_i.open(QIODevice::WriteOnly | QIODevice::Append);
+       // file_i.remove();
+        file_i.open(QIODevice::WriteOnly | QIODevice::Text);
         QTextStream out(&file_i);
         QString o = "Y";
         out<<o;
