@@ -186,12 +186,12 @@
     <rect>
      <x>210</x>
      <y>120</y>
-     <width>311</width>
+     <width>321</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>Copyright 2024 - Walter Giri</string>
+    <string>Copyright 2026 - Walter Giri</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">

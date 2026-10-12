@@ -34,8 +34,8 @@ About::~About()
 void About::settaIcona()
 {
     QString currentExecDir(QCoreApplication::applicationDirPath());
-    ui->label_2->setPixmap(currentExecDir+"/disp128-1.png");
-    ui->label_5->setPixmap(currentExecDir+"/logow 2.png");
+    ui->label_2->setPixmap(QPixmap(":/Immagini/dispensa128.png"));
+    ui->label_5->setPixmap(QPixmap(":/Immagini/logow 2.png"));
 }
 
 void About::on_pushButton_3_clicked()
