@@ -49,7 +49,7 @@ void ListaSpesa::on_pushButton_2_clicked()
     if(matrice.isEmpty()) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Non è stato possibile creare la Lista";
+        QString stringa = (tr("Non è stato possibile creare la Lista"));
         m->messaggio(fl,stringa);
     } else {
         ui->label_3->setVisible(true);

@@ -24,9 +24,12 @@ Messaggi::Messaggi() {}
 void Messaggi::messaggio(QString fl,QString stringa)
 {
     QSoundEffect effect;
-    if (fl == "a") effect.setSource(QUrl::fromLocalFile("attenzione.wav"));
+    /*if (fl == "a") effect.setSource(QUrl::fromLocalFile("attenzione.wav"));
     if (fl == "s") effect.setSource(QUrl::fromLocalFile("successo.wav"));
-    if (fl == "e") effect.setSource(QUrl::fromLocalFile("error.wav"));
+    if (fl == "e") effect.setSource(QUrl::fromLocalFile("error.wav"));*/
+    if (fl == "a")effect.setSource(QUrl("qrc:/Sound/attenzione.wav"));
+    if (fl == "s")effect.setSource(QUrl("qrc:/Sound/successo.wav"));
+    if (fl == "e")effect.setSource(QUrl("qrc:/Sound/error.wav"));
     effect.setLoopCount(1);
     effect.setVolume(0.30f);
     QMessageBox *msg = new QMessageBox();

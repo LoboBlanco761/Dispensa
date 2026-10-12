@@ -43,11 +43,11 @@ void Gestione::on_pushButton_2_clicked()
     QSqlDatabase db = c->conn();
     Dati *d = new Dati();
     QStringList matrice = d->selezCat(db,cat);
-    ui->label_3->setText("Categoria : "+cat);
+    ui->label_3->setText(tr("Categoria : ")+cat);
     if(matrice.isEmpty()) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Non sono presenti Prodotti nella Categoria selezionata";
+        QString stringa = (tr("Non sono presenti Prodotti nella Categoria selezionata"));
         m->messaggio(fl,stringa);
     } else {
         ui->pushButton_3->setEnabled(true);
@@ -76,7 +76,7 @@ void Gestione::on_pushButton_3_clicked()
     if (name_sel.isEmpty()) {
         Messaggi *m = new Messaggi();
         QString fl = "a";
-        QString stringa = "Nessuna Selezione";
+        QString stringa = (tr("Nessuna Selezione"));
         m->messaggio(fl,stringa);
     } else {
         QString param = (cat+" - "+name_sel);

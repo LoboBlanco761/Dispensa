@@ -17,12 +17,34 @@
 #include "mainwindow.h"
 
 #include <QApplication>
+#include <QTranslator>
+#include <QSplashScreen>
+#include <QTimer>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QCoreApplication::setAttribute(Qt::AA_DontUseNativeMenuBar);
+    QTranslator translator;
+
+    // Lingua del sistema:
+    //if (translator.load(QLocale::system(), "Dispensa", "_", ":/i18n")) {
+      //  a.installTranslator(&translator);
+    //}
+
+    if (translator.load(QLocale("fr"), "Dispensa", "_", ":/i18n")) {
+        a.installTranslator(&translator);
+    }
+    QString imagePath = (":/Immagini/Dispensa600.png");
+    QPixmap pixmap(imagePath);
+    QSplashScreen  splash(pixmap,  Qt :: WindowStaysOnTopHint);
+    splash.show();
+
     MainWindow w;
-    w.show();
+    splash.activateWindow();
+    QTimer::singleShot(5000, [&splash, &w]() {
+        w.show();
+        splash.finish(&w);
+    });
     return a.exec();
 }

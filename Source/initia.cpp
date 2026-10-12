@@ -78,11 +78,11 @@ void Initia::on_progressBar_valueChanged(int value)
             lab = ("color: green");
             ui->label_3->setStyleSheet(lab);
             ui->pushButton_3->setEnabled(true);
-            ui->label_3->setText("Successo");
+            ui->label_3->setText(tr("Successo"));
         } else {
             lab = ("color: red");
             ui->label_3->setStyleSheet(lab);
-            ui->label_3->setText("Fallito");
+            ui->label_3->setText(tr("Fallito"));
         }
     }
 }

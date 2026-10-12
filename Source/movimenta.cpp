@@ -73,11 +73,11 @@ void Movimenta::on_pushButton_2_clicked()
         QString stringa;
         if(ef == "y") {
             fl = "s";
-            stringa = "Movimentazione Dispensa avvenuta con Successo";
+            stringa = (tr("Movimentazione Dispensa avvenuta con Successo"));
             m->messaggio(fl,stringa);
         } else {
             fl = "e";
-            stringa = "Movimentazione Dispensa Fallita";
+            stringa = (tr("Movimentazione Dispensa Fallita"));
             m->messaggio(fl,stringa);
         }
     }
@@ -97,7 +97,7 @@ void Movimenta::settaPannello(QString param)
     QString cat = listp[0];
     QString prod = listp[1];
     QString qtas = listp[2];
-    ui->label_2->setText(cat+" : "+prod+"  Quantità : "+qtas);
+    ui->label_2->setText(cat+" : "+prod+(tr("  Quantità : "))+qtas);
     ui->label_5->setText(qtas);
     Connessione *c = new Connessione();
     QSqlDatabase db = c->conn();

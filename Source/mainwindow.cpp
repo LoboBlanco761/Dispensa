@@ -52,7 +52,7 @@ static void process_line(const QString &)
 void MainWindow::settaImg()
 {
     QString currentExecDir(QCoreApplication::applicationDirPath());
-    ui->label_2->setPixmap(currentExecDir+"/disp256.png");
+    ui->label_2->setPixmap(QPixmap(":/Immagini/Dispensa256.png"));
 }
 
 void MainWindow::testInit()

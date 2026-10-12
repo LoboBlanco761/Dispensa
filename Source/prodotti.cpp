@@ -56,11 +56,11 @@ void Prodotti::on_pushButton_2_clicked()
         QString stringa;
         if(ef == "y") {
             fl = "s";
-            stringa = "Inserimento prodotto avvenuto con successo";
+            stringa = (tr("Inserimento prodotto avvenuto con successo"));
             m->messaggio(fl,stringa);
         } else {
             fl = "e";
-            stringa = "Inserimento prodotto fallito";
+            stringa = (tr("Inserimento prodotto fallito"));
             m->messaggio(fl,stringa);
         }
         db.close();
