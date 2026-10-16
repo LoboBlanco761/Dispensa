@@ -107,6 +107,7 @@ if(QT_VERSION_MAJOR EQUAL 6)
             translations/Dispensa_es.ts
             translations/Dispensa_de.ts
             translations/Dispensa_el.ts
+            translations/Dispensa_ro.ts
     )
     endif()
 
