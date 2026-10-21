@@ -1,10 +1,27 @@
 [Desktop Entry]
 Type=Application
 Name=Dispensa
+Name[en]=Pantry
+Name[es]=Despensa
+Name[fr]=Garde-manger
+Name[de]=Vorratskammer
+Name[el]=Τροφοθήκη
+Name[ro]=Cămară
+Name[pt]=Despensa
+Name[ru]=Кладовая
+
 Comment=Applicazione Dispensa
+Comment[en]=Pantry application
+Comment[es]=Aplicación de despensa
+Comment[fr]=Application de garde-manger
+Comment[de]=Vorratskammer-Anwendung
+Comment[el]=Εφαρμογή τροφοθήκης
+Comment[ro]=Aplicație pentru cămară
+Comment[pt]=Aplicação de despensa
+Comment[ru]=Приложение для кладовой
+
 Exec=/opt/dispensa/bin/Dispensa
 TryExec=/opt/dispensa/bin/Dispensa
 Icon=dispensa
 Terminal=false
-Categories=Education;
-
+Categories=Utility;
