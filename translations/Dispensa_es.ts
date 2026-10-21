@@ -57,42 +57,42 @@
     <message>
         <location filename="../Source/controlli.cpp" line="59"/>
         <source>Inserire Quantità</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduzca la cantidad</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="67"/>
         <source>Quantità non numerica</source>
-        <translation type="unfinished"></translation>
+        <translation>Cantidad no numérica</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="84"/>
         <source>Nessuna Movimentazione</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin movimiento</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="91"/>
         <source>Possibile una sola Movimentazione</source>
-        <translation type="unfinished"></translation>
+        <translation>Solo es posible un movimiento</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="101"/>
         <source>Quantità prelevata non numerica</source>
-        <translation type="unfinished"></translation>
+        <translation>Cantidad retirada no numérica</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="112"/>
         <source>Quantità depositata non numerica</source>
-        <translation type="unfinished"></translation>
+        <translation>Cantidad depositada no numérica</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="129"/>
         <source>Quantità Prelevata maggiore di quantità dispensa</source>
-        <translation type="unfinished"></translation>
+        <translation>Cantidad retirada mayor que la cantidad de la despensa</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="143"/>
         <source>Nessuna Modifica</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin cambios</translation>
     </message>
 </context>
 <context>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../Source/gestione.ui" line="181"/>
         <source>Seleziona Categoria : </source>
-        <translation>Selection Categoria :</translation>
+        <translation>Selection Categoria : </translation>
     </message>
     <message>
         <location filename="../Source/gestione.ui" line="204"/>
@@ -301,6 +301,26 @@
         <source>&amp;ModificaProdotto</source>
         <translation>&amp;EditarProducto</translation>
     </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="77"/>
+        <source>Elimina Categoria</source>
+        <translation>Eliminar categoría</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="142"/>
+        <source>Modifica Categoria</source>
+        <translation>Editar categoría</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="152"/>
+        <source>Elimina Prodotto</source>
+        <translation>Eliminar producto</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="162"/>
+        <source>Modifica Prodotto</source>
+        <translation>Editar producto</translation>
+    </message>
 </context>
 <context>
     <name>Movimenta</name>
@@ -317,7 +337,7 @@
     <message>
         <location filename="../Source/movimenta.ui" line="188"/>
         <source>Seleziona Categoria : </source>
-        <translation>Selection Categoria :</translation>
+        <translation>Selection Categoria : </translation>
     </message>
     <message>
         <location filename="../Source/movimenta.ui" line="204"/>
@@ -358,7 +378,7 @@
     <message>
         <location filename="../Source/movimenta.cpp" line="100"/>
         <source>  Quantità : </source>
-        <translation>  Cantidad:</translation>
+        <translation>  Cantidad : </translation>
     </message>
 </context>
 <context>
@@ -376,7 +396,7 @@
     <message>
         <location filename="../Source/prodotti.ui" line="181"/>
         <source>Categoria</source>
-        <translation>Categoria </translation>
+        <translation>Categoria</translation>
     </message>
     <message>
         <location filename="../Source/prodotti.ui" line="194"/>
@@ -414,7 +434,7 @@
     <message>
         <location filename="../Source/situazdisp.ui" line="66"/>
         <source>Situazione</source>
-        <translation>Situación </translation>
+        <translation>Situación</translation>
     </message>
     <message>
         <location filename="../Source/situazdisp.ui" line="149"/>
@@ -437,7 +457,7 @@
     <message>
         <location filename="../Source/situazdisp.cpp" line="118"/>
         <source>Categoria</source>
-        <translation>Categoria </translation>
+        <translation>Categoria</translation>
     </message>
     <message>
         <location filename="../Source/situazdisp.cpp" line="120"/>
@@ -463,9 +483,38 @@
         <translation>Cancelar</translation>
     </message>
     <message>
+        <location filename="../Source/tools.cpp" line="44"/>
+        <location filename="../Source/tools.cpp" line="52"/>
+        <location filename="../Source/tools.cpp" line="111"/>
+        <source>Elimina Categoria</source>
+        <translation>Eliminar categoría</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="44"/>
+        <location filename="../Source/tools.cpp" line="54"/>
+        <location filename="../Source/tools.cpp" line="119"/>
+        <source>Modifica Categoria</source>
+        <translation>Editar categoría</translation>
+    </message>
+    <message>
         <location filename="../Source/tools.cpp" line="45"/>
         <source>Seleziona Categoria</source>
         <translation>Seleccionar Categoria</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="48"/>
+        <location filename="../Source/tools.cpp" line="52"/>
+        <location filename="../Source/tools.cpp" line="139"/>
+        <source>Elimina Prodotto</source>
+        <translation>Eliminar producto</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="48"/>
+        <location filename="../Source/tools.cpp" line="54"/>
+        <location filename="../Source/tools.cpp" line="104"/>
+        <location filename="../Source/tools.cpp" line="147"/>
+        <source>Modifica Prodotto</source>
+        <translation>Editar producto</translation>
     </message>
     <message>
         <location filename="../Source/tools.cpp" line="49"/>
@@ -557,6 +606,12 @@
         <translation>Cancelar</translation>
     </message>
     <message>
+        <location filename="../Source/toolsmod.cpp" line="39"/>
+        <location filename="../Source/toolsmod.cpp" line="59"/>
+        <source>Modifica Categoria</source>
+        <translation>Editar categoría</translation>
+    </message>
+    <message>
         <location filename="../Source/toolsmod.cpp" line="40"/>
         <location filename="../Source/toolsmod.cpp" line="44"/>
         <source>Categoria : </source>
@@ -567,12 +622,17 @@
         <location filename="../Source/toolsmod.cpp" line="44"/>
         <location filename="../Source/toolsmod.cpp" line="45"/>
         <source> - Inserisci Modifica :</source>
-        <translation>  - Introduce Edit :</translation>
+        <translation> - Introduce Edit :</translation>
     </message>
     <message>
         <location filename="../Source/toolsmod.cpp" line="45"/>
         <source>Prodotto : </source>
-        <translation> Producto : </translation>
+        <translation>Producto : </translation>
+    </message>
+    <message>
+        <location filename="../Source/toolsmod.cpp" line="55"/>
+        <source>Modifica Prodotto</source>
+        <translation>Editar producto</translation>
     </message>
 </context>
 <context>
@@ -596,6 +656,11 @@
         <location filename="../Source/visualelenco.ui" line="259"/>
         <source>Chiudi</source>
         <translation>Cierre</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualelenco.cpp" line="41"/>
+        <source>tutto</source>
+        <translation>Todo</translation>
     </message>
     <message>
         <location filename="../Source/visualelenco.cpp" line="42"/>
@@ -643,12 +708,12 @@
     <message>
         <location filename="../Source/visualizza.ui" line="200"/>
         <source>Tutto</source>
-        <translation>Todos</translation>
+        <translation>Todo</translation>
     </message>
     <message>
         <location filename="../Source/visualizza.ui" line="210"/>
         <source>Categoria</source>
-        <translation>Categoria </translation>
+        <translation>Categoria</translation>
     </message>
     <message>
         <location filename="../Source/visualizza.ui" line="226"/>
@@ -659,6 +724,16 @@
         <location filename="../Source/visualizza.ui" line="255"/>
         <source>Annulla</source>
         <translation>Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualizza.cpp" line="36"/>
+        <source>tutto</source>
+        <translation>Todo</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualizza.cpp" line="37"/>
+        <source>cat</source>
+        <translation>cat</translation>
     </message>
 </context>
 </TS>

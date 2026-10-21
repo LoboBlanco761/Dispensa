@@ -80,32 +80,27 @@
     <message>
         <location filename="../Source/controlli.cpp" line="91"/>
         <source>Possibile una sola Movimentazione</source>
-        <translation>O singură mișcare posibilă
-</translation>
+        <translation>O singură mișcare posibilă</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="101"/>
         <source>Quantità prelevata non numerica</source>
-        <translation>Cantitate non-numerică retrasă
-</translation>
+        <translation>Cantitate non-numerică retrasă</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="112"/>
         <source>Quantità depositata non numerica</source>
-        <translation>Cantitate depusă non-numerică
-</translation>
+        <translation>Cantitate depusă non-numerică</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="129"/>
         <source>Quantità Prelevata maggiore di quantità dispensa</source>
-        <translation>Cantitatea retrasă este mai mare decât cantitatea distribuită
-</translation>
+        <translation>Cantitatea retrasă este mai mare decât cantitatea distribuită</translation>
     </message>
     <message>
         <location filename="../Source/controlli.cpp" line="143"/>
         <source>Nessuna Modifica</source>
-        <translation>Fără modificări
-</translation>
+        <translation>Fără modificări</translation>
     </message>
 </context>
 <context>
@@ -118,8 +113,7 @@
     <message>
         <location filename="../Source/gestione.ui" line="149"/>
         <source>Gestione Dispensa</source>
-        <translation>Managementul cămării
-</translation>
+        <translation>Managementul cămării</translation>
     </message>
     <message>
         <location filename="../Source/gestione.ui" line="181"/>
@@ -154,8 +148,7 @@
     <message>
         <location filename="../Source/gestione.cpp" line="79"/>
         <source>Nessuna Selezione</source>
-        <translation>Fără selecție
-</translation>
+        <translation>Fără selecție</translation>
     </message>
 </context>
 <context>
@@ -168,8 +161,7 @@
     <message>
         <location filename="../Source/initia.ui" line="149"/>
         <source>Inizializzazione</source>
-        <translation>Inițializare
-</translation>
+        <translation>Inițializare</translation>
     </message>
     <message>
         <location filename="../Source/initia.ui" line="236"/>
@@ -222,8 +214,7 @@
     <message>
         <location filename="../Source/listaspesa.ui" line="223"/>
         <source>E&apos; possibile modificare la Lista aggiungendo i quantitativi</source>
-        <translation>Este posibilă modificarea listei prin adăugarea cantităților
-</translation>
+        <translation>Este posibilă modificarea listei prin adăugarea cantităților</translation>
     </message>
     <message>
         <location filename="../Source/listaspesa.ui" line="249"/>
@@ -306,20 +297,37 @@
     <message>
         <location filename="../Source/mainwindow.ui" line="316"/>
         <source>&amp;ModificaCategoria</source>
-        <translation>&amp;EditațiCategoria
-</translation>
+        <translation>&amp;EditațiCategoria</translation>
     </message>
     <message>
         <location filename="../Source/mainwindow.ui" line="321"/>
         <source>&amp;EliminaProdotto</source>
-        <translation>&amp;ȘtergeProdus
-</translation>
+        <translation>&amp;ȘtergeProdus</translation>
     </message>
     <message>
         <location filename="../Source/mainwindow.ui" line="326"/>
         <source>&amp;ModificaProdotto</source>
-        <translation>&amp;EditareProdus
-</translation>
+        <translation>&amp;EditareProdus</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="77"/>
+        <source>Elimina Categoria</source>
+        <translation>Ștergeți categoria</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="142"/>
+        <source>Modifica Categoria</source>
+        <translation>Editați categoria</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="152"/>
+        <source>Elimina Prodotto</source>
+        <translation>Șterge produsul</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="162"/>
+        <source>Modifica Prodotto</source>
+        <translation>Editați produsul</translation>
     </message>
 </context>
 <context>
@@ -439,8 +447,7 @@
     <message>
         <location filename="../Source/situazdisp.ui" line="149"/>
         <source>Situazione Dispensa</source>
-        <translation>Situația Cămării
-</translation>
+        <translation>Situația Cămării</translation>
     </message>
     <message>
         <location filename="../Source/situazdisp.ui" line="301"/>
@@ -450,8 +457,7 @@
     <message>
         <location filename="../Source/situazdisp.cpp" line="49"/>
         <source>Non sono presenti prodotti in Dispensa</source>
-        <translation>Nu există produse în cămară
-</translation>
+        <translation>Nu există produse în cămară</translation>
     </message>
 </context>
 <context>
@@ -485,10 +491,38 @@
         <translation>Anula</translation>
     </message>
     <message>
+        <location filename="../Source/tools.cpp" line="44"/>
+        <location filename="../Source/tools.cpp" line="52"/>
+        <location filename="../Source/tools.cpp" line="111"/>
+        <source>Elimina Categoria</source>
+        <translation>Ștergeți categoria</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="44"/>
+        <location filename="../Source/tools.cpp" line="54"/>
+        <location filename="../Source/tools.cpp" line="119"/>
+        <source>Modifica Categoria</source>
+        <translation>Editați categoria</translation>
+    </message>
+    <message>
         <location filename="../Source/tools.cpp" line="45"/>
         <source>Seleziona Categoria</source>
-        <translation>Selectați categoria
-</translation>
+        <translation>Selectați categoria</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="48"/>
+        <location filename="../Source/tools.cpp" line="52"/>
+        <location filename="../Source/tools.cpp" line="139"/>
+        <source>Elimina Prodotto</source>
+        <translation>Șterge produsul</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="48"/>
+        <location filename="../Source/tools.cpp" line="54"/>
+        <location filename="../Source/tools.cpp" line="104"/>
+        <location filename="../Source/tools.cpp" line="147"/>
+        <source>Modifica Prodotto</source>
+        <translation>Editați produsul</translation>
     </message>
     <message>
         <location filename="../Source/tools.cpp" line="49"/>
@@ -513,14 +547,12 @@
     <message>
         <location filename="../Source/tools.cpp" line="94"/>
         <source>Nessuna Selezione</source>
-        <translation>Fără selecție
-</translation>
+        <translation>Fără selecție</translation>
     </message>
     <message>
         <location filename="../Source/tools.cpp" line="114"/>
         <source>Eliminazione Categoria avvenuta con Successo</source>
-        <translation>Eliminare de categorie reușită
-</translation>
+        <translation>Eliminare de categorie reușită</translation>
     </message>
     <message>
         <location filename="../Source/tools.cpp" line="116"/>
@@ -545,14 +577,12 @@
     <message>
         <location filename="../Source/tools.cpp" line="144"/>
         <source>Eliminazione Prodotto Fallita</source>
-        <translation>Ștergerea produsului a eșuat
-</translation>
+        <translation>Ștergerea produsului a eșuat</translation>
     </message>
     <message>
         <location filename="../Source/tools.cpp" line="162"/>
         <source>Modifica Prodotto avvenuta con Successo</source>
-        <translation>Schimbare de produs reușită
-</translation>
+        <translation>Schimbare de produs reușită</translation>
     </message>
     <message>
         <location filename="../Source/tools.cpp" line="164"/>
@@ -584,6 +614,12 @@
         <translation>Anula</translation>
     </message>
     <message>
+        <location filename="../Source/toolsmod.cpp" line="39"/>
+        <location filename="../Source/toolsmod.cpp" line="59"/>
+        <source>Modifica Categoria</source>
+        <translation>Editați categoria</translation>
+    </message>
+    <message>
         <location filename="../Source/toolsmod.cpp" line="40"/>
         <location filename="../Source/toolsmod.cpp" line="44"/>
         <source>Categoria : </source>
@@ -594,13 +630,17 @@
         <location filename="../Source/toolsmod.cpp" line="44"/>
         <location filename="../Source/toolsmod.cpp" line="45"/>
         <source> - Inserisci Modifica :</source>
-        <translation> - Inserare editare :
-</translation>
+        <translation> - Inserare editare :</translation>
     </message>
     <message>
         <location filename="../Source/toolsmod.cpp" line="45"/>
         <source>Prodotto : </source>
         <translation>Produs : </translation>
+    </message>
+    <message>
+        <location filename="../Source/toolsmod.cpp" line="55"/>
+        <source>Modifica Prodotto</source>
+        <translation>Editați produsul</translation>
     </message>
 </context>
 <context>
@@ -613,8 +653,7 @@
     <message>
         <location filename="../Source/visualelenco.ui" line="181"/>
         <source>Seleziona Categoria :</source>
-        <translation>Selectați categoria :
-</translation>
+        <translation>Selectați categoria :</translation>
     </message>
     <message>
         <location filename="../Source/visualelenco.ui" line="204"/>
@@ -627,6 +666,11 @@
         <translation>Aproape</translation>
     </message>
     <message>
+        <location filename="../Source/visualelenco.cpp" line="41"/>
+        <source>tutto</source>
+        <translation>Toate</translation>
+    </message>
+    <message>
         <location filename="../Source/visualelenco.cpp" line="42"/>
         <source>Elenco Generale</source>
         <translation>Listă generală</translation>
@@ -634,14 +678,12 @@
     <message>
         <location filename="../Source/visualelenco.cpp" line="52"/>
         <source>Non sono presenti Prodotti</source>
-        <translation>Nu există produse disponibile
-</translation>
+        <translation>Nu există produse disponibile</translation>
     </message>
     <message>
         <location filename="../Source/visualelenco.cpp" line="59"/>
         <source>Elenco Categoria</source>
-        <translation>Listă de categorii
-</translation>
+        <translation>Listă de categorii</translation>
     </message>
     <message>
         <location filename="../Source/visualelenco.cpp" line="85"/>
@@ -664,8 +706,7 @@
     <message>
         <location filename="../Source/visualizza.ui" line="149"/>
         <source>Visualizza Dispensa</source>
-        <translation>Vezi cămară
-</translation>
+        <translation>Vezi cămară</translation>
     </message>
     <message>
         <location filename="../Source/visualizza.ui" line="181"/>
@@ -691,6 +732,16 @@
         <location filename="../Source/visualizza.ui" line="255"/>
         <source>Annulla</source>
         <translation>Anula</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualizza.cpp" line="36"/>
+        <source>tutto</source>
+        <translation>Toate</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualizza.cpp" line="37"/>
+        <source>cat</source>
+        <translation>cat</translation>
     </message>
 </context>
 </TS>

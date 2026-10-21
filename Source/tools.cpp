@@ -41,17 +41,17 @@ void Tools::settaPannello(QString param)
     QSqlDatabase db = c->conn();
     Dati *d = new Dati();
     QStringList matrice;
-    if((param == "Elimina Categoria") || (param == "Modifica Categoria")) {
+    if((param == (tr("Elimina Categoria"))) || (param == (tr("Modifica Categoria")))) {
         ui->label_2->setText(tr("Seleziona Categoria"));
         matrice = d->listaCat(db);
     }
-    if((param == "Elimina Prodotto") || (param == "Modifica Prodotto")) {
+    if((param == (tr("Elimina Prodotto"))) || (param == (tr("Modifica Prodotto")))) {
         ui->label_2->setText(tr("Seleziona Prodotto"));
         matrice = d->listaProd(db);
     }
-    if((param == "Elimina Categoria") || (param == "Elimina Prodotto"))
+    if((param == (tr("Elimina Categoria"))) || (param == (tr("Elimina Prodotto"))))
         ui->pushButton_2->setText(tr("Elimina"));
-    if((param == "Modifica Categoria") || (param == "Modifica Prodotto"))
+    if((param == (tr("Modifica Categoria"))) || (param == (tr("Modifica Prodotto"))))
         ui->pushButton_2->setText(tr("Modifica"));
     caricaLista(matrice);
     delete(d);
@@ -101,14 +101,14 @@ void Tools::on_pushButton_2_clicked()
         QString ids = listt[0];
         QString cat = listt[1];
         QString prod;
-        if(param == "Modifica Prodotto")
+        if(param == (tr("Modifica Prodotto")))
             prod = listt[2];
         int id = ids.toInt();
         Dati *d = new Dati();
         QString ef = "y";
         QString ec = "y";
         QString stringa;
-        if(param == "Elimina Categoria"){
+        if(param == (tr("Elimina Categoria"))){
             ef = d->cancCat(db,id);
             if(ef == "y") {
                 stringa = (tr("Eliminazione Categoria avvenuta con Successo"));
@@ -116,7 +116,7 @@ void Tools::on_pushButton_2_clicked()
                 stringa = (tr("Eliminazione Categoria Fallita"));
             }
         }
-        if(param == "Modifica Categoria") {
+        if(param == (tr("Modifica Categoria"))) {
             ToolsMod *tm = new ToolsMod();
             tm->setAttribute(Qt::WA_DeleteOnClose);
             QString prod = "";
@@ -136,7 +136,7 @@ void Tools::on_pushButton_2_clicked()
                 stringa = (tr("Modifica Categoria Fallita"));
             }
         }
-        if(param == "Elimina Prodotto") {
+        if(param == (tr("Elimina Prodotto"))) {
             ef = d->cancProd(db,id);
             if(ef == "y") {
                 stringa = (tr("Eliminazione Prodotto avvenuta con Successo"));
@@ -144,7 +144,7 @@ void Tools::on_pushButton_2_clicked()
                 stringa = (tr("Eliminazione Prodotto Fallita"));
             }
         }
-        if(param == "Modifica Prodotto") {
+        if(param == (tr("Modifica Prodotto"))) {
             ToolsMod *tm = new ToolsMod();
             tm->setAttribute(Qt::WA_DeleteOnClose);
             tm->settaPannello(param,cat,prod);

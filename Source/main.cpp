@@ -28,13 +28,13 @@ int main(int argc, char *argv[])
     QTranslator translator;
 
     // Lingua del sistema:
-    //if (translator.load(QLocale::system(), "Dispensa", "_", ":/i18n")) {
-      //  a.installTranslator(&translator);
-    //}
-
-    if (translator.load(QLocale("fr"), "Dispensa", "_", ":/i18n")) {
+    if (translator.load(QLocale::system(), "Dispensa", "_", ":/i18n")) {
         a.installTranslator(&translator);
     }
+
+    /*if (translator.load(QLocale("ru"), "Dispensa", "_", ":/i18n")) {
+        a.installTranslator(&translator);
+    }*/
     QString imagePath = (":/Immagini/Dispensa600.png");
     QPixmap pixmap(imagePath);
     QSplashScreen  splash(pixmap,  Qt :: WindowStaysOnTopHint);

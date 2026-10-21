@@ -36,7 +36,7 @@ ToolsMod::~ToolsMod()
 void ToolsMod::settaPannello(QString param,QString cat,QString prod)
 {
     ui->label->setText(param);
-    if(param == "Modifica Categoria") {
+    if(param == (tr("Modifica Categoria"))) {
         ui->label_2->setText(tr("Categoria : ")+cat+(tr(" - Inserisci Modifica :")));
         ui->label_3->setVisible(false);
         ui->lineEdit_3->setVisible(false);
@@ -52,11 +52,11 @@ void ToolsMod::on_pushButton_2_clicked()
     QString ef = "y";
     QString categoria = ui->lineEdit_2->text();
     QString prodotto;
-    if(param == "Modifica Prodotto") {
+    if(param == (tr("Modifica Prodotto"))) {
         prodotto = ui->lineEdit_3->text();
     }
     Controlli *co = new Controlli();
-    if(param == "Modifica Categoria") {
+    if(param == (tr("Modifica Categoria"))) {
         ef = co->contrCat(categoria);
     } else {
         ef = co->contrModProd(categoria,prodotto);

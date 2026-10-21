@@ -16,7 +16,7 @@
     <message>
         <location filename="../Source/about.ui" line="194"/>
         <source>Copyright 2026 - Walter Giri</source>
-        <translation>Авторские права 2026 г - Walter Giri</translation>
+        <translation>Авторские права 2026 - Walter Giri</translation>
     </message>
     <message>
         <location filename="../Source/about.ui" line="207"/>
@@ -309,6 +309,26 @@
         <source>&amp;ModificaProdotto</source>
         <translation>&amp;РедактироватьПродукт</translation>
     </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="77"/>
+        <source>Elimina Categoria</source>
+        <translation>Удалить категорию</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="142"/>
+        <source>Modifica Categoria</source>
+        <translation>Редактировать категорию</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="152"/>
+        <source>Elimina Prodotto</source>
+        <translation>Удалить товар</translation>
+    </message>
+    <message>
+        <location filename="../Source/mainwindow.cpp" line="162"/>
+        <source>Modifica Prodotto</source>
+        <translation>Редактировать това</translation>
+    </message>
 </context>
 <context>
     <name>Movimenta</name>
@@ -471,9 +491,38 @@
         <translation>отменить</translation>
     </message>
     <message>
+        <location filename="../Source/tools.cpp" line="44"/>
+        <location filename="../Source/tools.cpp" line="52"/>
+        <location filename="../Source/tools.cpp" line="111"/>
+        <source>Elimina Categoria</source>
+        <translation>Удалить категорию</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="44"/>
+        <location filename="../Source/tools.cpp" line="54"/>
+        <location filename="../Source/tools.cpp" line="119"/>
+        <source>Modifica Categoria</source>
+        <translation>Редактировать категорию</translation>
+    </message>
+    <message>
         <location filename="../Source/tools.cpp" line="45"/>
         <source>Seleziona Categoria</source>
         <translation>Выберите категорию</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="48"/>
+        <location filename="../Source/tools.cpp" line="52"/>
+        <location filename="../Source/tools.cpp" line="139"/>
+        <source>Elimina Prodotto</source>
+        <translation>Удалить товар</translation>
+    </message>
+    <message>
+        <location filename="../Source/tools.cpp" line="48"/>
+        <location filename="../Source/tools.cpp" line="54"/>
+        <location filename="../Source/tools.cpp" line="104"/>
+        <location filename="../Source/tools.cpp" line="147"/>
+        <source>Modifica Prodotto</source>
+        <translation>Редактировать това</translation>
     </message>
     <message>
         <location filename="../Source/tools.cpp" line="49"/>
@@ -565,6 +614,12 @@
         <translation>отменить</translation>
     </message>
     <message>
+        <location filename="../Source/toolsmod.cpp" line="39"/>
+        <location filename="../Source/toolsmod.cpp" line="59"/>
+        <source>Modifica Categoria</source>
+        <translation>Редактировать категорию</translation>
+    </message>
+    <message>
         <location filename="../Source/toolsmod.cpp" line="40"/>
         <location filename="../Source/toolsmod.cpp" line="44"/>
         <source>Categoria : </source>
@@ -581,6 +636,11 @@
         <location filename="../Source/toolsmod.cpp" line="45"/>
         <source>Prodotto : </source>
         <translation>Продукт : </translation>
+    </message>
+    <message>
+        <location filename="../Source/toolsmod.cpp" line="55"/>
+        <source>Modifica Prodotto</source>
+        <translation>Редактировать това</translation>
     </message>
 </context>
 <context>
@@ -604,6 +664,11 @@
         <location filename="../Source/visualelenco.ui" line="259"/>
         <source>Chiudi</source>
         <translation>закрыто</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualelenco.cpp" line="41"/>
+        <source>tutto</source>
+        <translation>Все</translation>
     </message>
     <message>
         <location filename="../Source/visualelenco.cpp" line="42"/>
@@ -667,6 +732,16 @@
         <location filename="../Source/visualizza.ui" line="255"/>
         <source>Annulla</source>
         <translation>отменить</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualizza.cpp" line="36"/>
+        <source>tutto</source>
+        <translation>Все</translation>
+    </message>
+    <message>
+        <location filename="../Source/visualizza.cpp" line="37"/>
+        <source>cat</source>
+        <translation>кот</translation>
     </message>
 </context>
 </TS>

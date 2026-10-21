@@ -38,7 +38,7 @@ void VisualElenco::settaPannello(QString param)
     Connessione *c = new Connessione();
     QSqlDatabase db = c->conn();
     Dati *d = new Dati();
-    if(param == "tutto") {
+    if(param == (tr("tutto"))) {
         ui->label->setText(tr("Elenco Generale"));
         ui->label_2->setVisible(false);
         ui->label_3->setVisible(false);

@@ -74,7 +74,7 @@ void MainWindow::testInit()
 
 void MainWindow::on_action_EliminaCategoria_triggered()
 {
-    QString param = "Elimina Categoria";
+    QString param = (tr("Elimina Categoria"));
     Tools *t = new Tools();
     t->setAttribute(Qt::WA_DeleteOnClose);
     t->settaPannello(param);
@@ -139,7 +139,7 @@ void MainWindow::on_action_ListaSpesa_triggered()
 
 void MainWindow::on_action_ModificaCategoria_triggered()
 {
-    QString param = "Modifica Categoria";
+    QString param = (tr("Modifica Categoria"));
     Tools *t = new Tools();
     t->setAttribute(Qt::WA_DeleteOnClose);
     t->settaPannello(param);
@@ -149,7 +149,7 @@ void MainWindow::on_action_ModificaCategoria_triggered()
 
 void MainWindow::on_action_EliminaProdotto_triggered()
 {
-    QString param = "Elimina Prodotto";
+    QString param = (tr("Elimina Prodotto"));
     Tools *t = new Tools();
     t->setAttribute(Qt::WA_DeleteOnClose);
     t->settaPannello(param);
@@ -159,7 +159,7 @@ void MainWindow::on_action_EliminaProdotto_triggered()
 
 void MainWindow::on_action_ModificaProdotto_triggered()
 {
-    QString param = "Modifica Prodotto";
+    QString param = (tr("Modifica Prodotto"));
     Tools *t = new Tools();
     t->setAttribute(Qt::WA_DeleteOnClose);
     t->settaPannello(param);

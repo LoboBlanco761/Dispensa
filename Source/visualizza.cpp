@@ -33,8 +33,8 @@ Visualizza::~Visualizza()
 void Visualizza::on_pushButton_2_clicked()
 {
     QString param;
-    if(ui->radioButton->isChecked()) param = "tutto";
-    if(ui->radioButton_2->isChecked()) param = "cat";
+    if(ui->radioButton->isChecked()) param = (tr("tutto"));
+    if(ui->radioButton_2->isChecked()) param = (tr("cat"));
     VisualElenco *ve = new VisualElenco();
     ve->setAttribute(Qt::WA_DeleteOnClose);
     ve->settaPannello(param);
