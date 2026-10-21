@@ -8,7 +8,8 @@ Name[de]=Vorratskammer
 Name[el]=Τροφοθήκη
 Name[ro]=Cămară
 Name[pt]=Despensa
-Name[ru]=Кладовая
+Name[ru]=КладоваяPath=/opt/dispensa/bin
+Path=/opt/dispensa/bin
 
 Comment=Applicazione Dispensa
 Comment[en]=Pantry application
@@ -24,4 +25,4 @@ Exec=/opt/dispensa/bin/Dispensa
 TryExec=/opt/dispensa/bin/Dispensa
 Icon=dispensa
 Terminal=false
-Categories=Utility;
+Categories=Utility;Application;
