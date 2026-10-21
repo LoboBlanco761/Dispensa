@@ -1,0 +1,9 @@
+Package: dispensa
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Maintainer: Walter <la-tua-email>
+Depends: libc6, libstdc++6
+Description: Applicazione Dispensa
+ Applicazione desktop realizzata con Qt.
