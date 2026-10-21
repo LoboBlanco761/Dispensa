@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Dispensa
+Comment=Applicazione Dispensa
+Exec=/opt/dispensa/bin/Dispensa
+TryExec=/opt/dispensa/bin/Dispensa
+Icon=dispensa
+Terminal=false
+Categories=Education;
+

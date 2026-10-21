@@ -128,12 +128,33 @@ set_target_properties(Dispensa PROPERTIES
 )
 
 include(GNUInstallDirs)
+
 install(TARGETS Dispensa
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
+install(FILES "${CMAKE_SOURCE_DIR}/init.dat"
+    DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
+
+install(FILES "${CMAKE_SOURCE_DIR}/packaging/dispensa.desktop"
+    DESTINATION /usr/share/applications
+)
+
+install(FILES "${CMAKE_SOURCE_DIR}/Dispensa.png"
+    DESTINATION /usr/share/icons/hicolor/256x256/apps
+    RENAME dispensa.png
+)
+
+
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Dispensa)
+
+    qt_generate_deploy_app_script(
+        TARGET Dispensa
+        OUTPUT_SCRIPT deploy_script
+    )
+    install(SCRIPT ${deploy_script})
 endif()
