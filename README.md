@@ -12,4 +12,4 @@
      </p>
       <p align="center">
 <b>Lingue supportate: <br> Italiano , Inglese , Spagnolo , Francese , Tedesco , Greco , 
-Rumeno , Portoghese</b>
+Rumeno , Portoghese , Russo</b>
