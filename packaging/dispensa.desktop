@@ -8,7 +8,7 @@ Name[de]=Vorratskammer
 Name[el]=Τροφοθήκη
 Name[ro]=Cămară
 Name[pt]=Despensa
-Name[ru]=КладоваяPath=/opt/dispensa/bin
+Name[ru]=Кладовая
 Path=/opt/dispensa/bin
 
 Comment=Applicazione Dispensa
