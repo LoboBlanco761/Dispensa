@@ -65,7 +65,7 @@ void MainWindow::testInit()
         qFatal("Impossibile creare la cartella dati: %s", qPrintable(dataDir));
     }
     const QString userInit = dataDir + "/init.dat";
-    const QString templateInit = "/opt/dispensa/share/dispensa/init.dat";
+    const QString templateInit = "/opt/dispensa/bin/init.dat";
     //const QString templateInit = "/home/walter/GitHub/Dispensa/build/Desktop_Qt_6_9_3_Debug/init.dat";
 
     const bool primoAvvio = !QFile::exists(userInit);
