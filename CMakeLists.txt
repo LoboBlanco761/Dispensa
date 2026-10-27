@@ -125,18 +125,24 @@ set_target_properties(Dispensa PROPERTIES
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
+    INSTALL_RPATH "$ORIGIN/../lib"
 )
+
 
 include(GNUInstallDirs)
 
+option(DISPENSA_DEPLOY_QT "Deploy Qt runtime dependencies" ON)
+
 install(TARGETS Dispensa
     BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
 )
 
+# Mantieni qui la destinazione solo se il programma si aspetta init.dat
+# accanto all'eseguibile.
 install(FILES "${CMAKE_SOURCE_DIR}/init.dat"
-    DESTINATION ${CMAKE_INSTALL_BINDIR}
+    DESTINATION bin
 )
 
 install(FILES "${CMAKE_SOURCE_DIR}/packaging/dispensa.desktop"
@@ -148,13 +154,14 @@ install(FILES "${CMAKE_SOURCE_DIR}/Dispensa.png"
     RENAME dispensa.png
 )
 
-
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Dispensa)
 
-    qt_generate_deploy_app_script(
-        TARGET Dispensa
-        OUTPUT_SCRIPT deploy_script
-    )
-    install(SCRIPT ${deploy_script})
+    if(DISPENSA_DEPLOY_QT)
+        qt_generate_deploy_app_script(
+            TARGET Dispensa
+            OUTPUT_SCRIPT deploy_script
+        )
+        install(SCRIPT "${deploy_script}")
+    endif()
 endif()
