@@ -20,6 +20,7 @@
 #include <QTimer>
 #include "connessione.h"
 #include "datiini.h"
+#include <QStandardPaths>
 
 Initia::Initia(QWidget *parent)
     : QDialog(parent)
@@ -45,9 +46,12 @@ void Initia::on_pushButton_2_clicked()
     ef = d->creTabCat(db);
     if(ef == "y") ef = d->creTabProd(db);
     db.close();
+    const QString dataDir =
+        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    const QString userInit = dataDir + "/init.dat";
     QString currentExecDir(QCoreApplication::applicationDirPath());
     if(ef == "y") {
-        QFile file_i (currentExecDir+"/init.dat");
+        QFile file_i (userInit);
        // file_i.remove();
         file_i.open(QIODevice::WriteOnly | QIODevice::Text);
         QTextStream out(&file_i);

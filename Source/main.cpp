@@ -23,6 +23,7 @@
 
 int main(int argc, char *argv[])
 {
+    QCoreApplication::setApplicationName("Dispensa");
     QApplication a(argc, argv);
     QCoreApplication::setAttribute(Qt::AA_DontUseNativeMenuBar);
     QTranslator translator;
