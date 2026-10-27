@@ -86,6 +86,13 @@ CMakeLists.txt.user*
 # Directories generate per pkg .deb
 /build/
 /build-deploy/
+/debian/dispensa/DEBIAN/triggers
+/debian/dispensa/opt/dispensa/bin/Dispensa
+/debian/dispensa/opt/dispensa/bin/init.*
+/debian/dispensa/usr/share/applications/dispensa.*
+/debian/dispensa/usr/share/doc/dispensa/changelog.Debian.gz
+/debian/dispensa/usr/share/icons/hicolor/256x256/apps/dispensa.png
+/debian/files
 /pkg/
 *.deb
 /obj*
@@ -94,3 +101,8 @@ CMakeLists.txt.user*
 *substvars
 
 
+
+/debian/dispensa/DEBIAN/control
+/debian/dispensa/DEBIAN/md5sums
+/debian/dispensa/DEBIAN/shlibs
+/debian/dispensa/opt/dispensa/bin/qt.conf
