@@ -88,4 +88,5 @@ CMakeLists.txt.user*
 /build-deploy/
 /pkg/
 *.deb
+/obj*
 
