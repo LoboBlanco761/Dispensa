@@ -25,6 +25,8 @@
 #include "about.h"
 #include "listaspesa.h"
 #include "tools.h"
+#include <QStandardPaths>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -48,7 +50,6 @@ static void process_line(const QString &)
 {
 }
 
-
 void MainWindow::settaImg()
 {
     QString currentExecDir(QCoreApplication::applicationDirPath());
@@ -57,8 +58,25 @@ void MainWindow::settaImg()
 
 void MainWindow::testInit()
 {
-    QString currentExecDir(QCoreApplication::applicationDirPath());
-    QFile file_i (currentExecDir+"/init.dat");
+    const QString dataDir =
+        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+
+    if (!QDir().mkpath(dataDir)) {
+        qFatal("Impossibile creare la cartella dati: %s", qPrintable(dataDir));
+    }
+    const QString userInit = dataDir + "/init.dat";
+   // const QString templateInit = "/opt/dispensa/share/dispensa/init.dat";
+    const QString templateInit = "/home/walter/GitHub/Dispensa/build/Desktop_Qt_6_9_3_Debug/init.dat";
+
+    const bool primoAvvio = !QFile::exists(userInit);
+    if (primoAvvio) {
+        if (!QFile::copy(templateInit, userInit)) {
+            qFatal("Impossibile copiare init.dat da %s a %s",
+                   qPrintable(templateInit), qPrintable(userInit));
+        }
+    }
+    //QString currentExecDir(QCoreApplication::applicationDirPath());
+    QFile file_i (userInit);
     file_i.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream in(&file_i);
     QString line = in.readLine();
