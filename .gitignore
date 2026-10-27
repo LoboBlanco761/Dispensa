@@ -89,4 +89,7 @@ CMakeLists.txt.user*
 /pkg/
 *.deb
 /obj*
+*dbgsym*
+*debhelper*
+*subvars
 
