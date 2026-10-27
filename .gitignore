@@ -91,5 +91,6 @@ CMakeLists.txt.user*
 /obj*
 *dbgsym*
 *debhelper*
-*subvars
+*substvars
+
 
