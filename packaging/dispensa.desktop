@@ -9,7 +9,7 @@ Name[el]=Τροφοθήκη
 Name[ro]=Cămară
 Name[pt]=Despensa
 Name[ru]=Кладовая
-Path=/opt/dispensa/bin
+
 
 Comment=Applicazione Dispensa
 Comment[en]=Pantry application
@@ -20,9 +20,10 @@ Comment[el]=Εφαρμογή τροφοθήκης
 Comment[ro]=Aplicație pentru cămară
 Comment[pt]=Aplicação de despensa
 Comment[ru]=Приложение для кладовой
+Path=/opt/dispensa/bin
 
 Exec=/opt/dispensa/bin/Dispensa
 TryExec=/opt/dispensa/bin/Dispensa
 Icon=dispensa
 Terminal=false
-Categories=Utility;Application;
+Categories=Utility;
