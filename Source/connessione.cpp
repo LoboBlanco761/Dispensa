@@ -17,19 +17,25 @@
 #include "connessione.h"
 #include <QCoreApplication>
 #include <QSqlError>
+#include <QDir>
+#include <QStandardPaths>
 
 Connessione::Connessione() {}
 
 QSqlDatabase Connessione::conn()
 {
     QSqlDatabase db;
-    QString currentExecDir(QCoreApplication::applicationDirPath());
+    const QString dataDir =
+        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+
+   // QString currentExecDir(QCoreApplication::applicationDirPath());
+    const QString userInit = dataDir + "/Dispensa.db";
     if (QSqlDatabase::contains()) {
         db = QSqlDatabase::database(QLatin1String(QSqlDatabase::defaultConnection), false);
     } else {
         db = QSqlDatabase::addDatabase("QSQLITE");
     }
-    db.setDatabaseName(currentExecDir+"/Dispensa.db");
+    db.setDatabaseName(userInit);
     if (!db.open()) {
         qDebug() << "db open error:"
                  << db.lastError();
