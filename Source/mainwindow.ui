@@ -262,7 +262,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(57, 57, 57);</string>
+    <string notr="true"/>
    </property>
    <widget class="QMenu" name="menu_File">
     <property name="title">
