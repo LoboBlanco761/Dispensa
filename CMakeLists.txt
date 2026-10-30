@@ -205,6 +205,12 @@ install(FILES "${CMAKE_SOURCE_DIR}/Dispensa.png"
     RENAME dispensa.png
 )
 
+if(WIN32)
+    install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/Dispensa.png"
+        DESTINATION "."
+    )
+endif()
+
 # Copia iniziale: il programma dovrebbe copiarla nella cartella dati
    # dell'utente al primo avvio, poi leggere/scrivere la copia dell'utente.
    install(FILES "${CMAKE_SOURCE_DIR}/init.dat"

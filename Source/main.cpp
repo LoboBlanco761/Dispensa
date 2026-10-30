@@ -20,11 +20,17 @@
 #include <QTranslator>
 #include <QSplashScreen>
 #include <QTimer>
+#include <QDir>
 
 int main(int argc, char *argv[])
 {
     QCoreApplication::setApplicationName("Dispensa");
     QApplication a(argc, argv);
+
+    const QString iconPath =
+        QDir(QCoreApplication::applicationDirPath()).filePath("Dispensa.png");
+    a.setWindowIcon(QIcon(iconPath));
+
     QCoreApplication::setAttribute(Qt::AA_DontUseNativeMenuBar);
     QTranslator translator;
 
