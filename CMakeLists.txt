@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 project(Dispensa VERSION 0.1 LANGUAGES CXX)
 
+include(GNUInstallDirs)
+
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -38,6 +40,11 @@ if(APPLE)
     list(APPEND PROJECT_SOURCES "${app_icon_macos}")
 endif()
 
+if(WIN32)
+    set(app_icon_windows "${CMAKE_CURRENT_SOURCE_DIR}/Resources/dispensa.rc")
+    list(APPEND PROJECT_SOURCES "${app_icon_windows}")
+endif()
+
 if(APPLE)
     set(app_license "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
     set_source_files_properties("${app_license}"
@@ -45,6 +52,19 @@ if(APPLE)
     )
     list(APPEND PROJECT_SOURCES "${app_license}")
 endif()
+
+if(UNIX AND NOT APPLE)
+    install(FILES "${CMAKE_SOURCE_DIR}/LICENSE"
+        DESTINATION "${CMAKE_INSTALL_DATADIR}/doc/dispensa"
+    )
+endif()
+
+if(WIN32)
+    install(FILES "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE"
+        DESTINATION "."
+    )
+endif()
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Dispensa
@@ -160,8 +180,6 @@ if(UNIX AND NOT APPLE)
 endif()
 
 
-
-include(GNUInstallDirs)
 
 option(DISPENSA_DEPLOY_QT "Deploy Qt runtime dependencies" ON)
 
