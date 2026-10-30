@@ -53,22 +53,19 @@ void Initia::on_pushButton_2_clicked()
     QString currentExecDir(QCoreApplication::applicationDirPath());
     if(ef == "y") {
         QFile file_i (userInit);
-        if (!file_i.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            qWarning() << "Impossibile aprire per la scrittura:"
+       // file_i.remove();
+        if(!file_i.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            qWarning()<< "impossibile aprire per la scrittura:"
                        << userInit << file_i.errorString();
             return;
         }
-
-       // file_i.remove();
-        file_i.open(QIODevice::WriteOnly | QIODevice::Text);
         QTextStream out(&file_i);
         QString o = "Y";
         out<<o;
-        if (out.status() != QTextStream::Ok) {
-            qWarning() << "Errore durante la scrittura di" << userInit;
-        }
-
-        file_i.close();
+        if (out.status() !=QTextStream::Ok) {
+            qWarning() << "errore durante la scrittura di" << userInit;
+            }
+                file_i.close();
     }
     ui->pushButton_2->setEnabled(false);
     ui->progressBar->setMinimum(0);
