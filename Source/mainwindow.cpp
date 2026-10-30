@@ -64,21 +64,26 @@ void MainWindow::testInit()
     if (!QDir().mkpath(dataDir)) {
         qFatal("Impossibile creare la cartella dati: %s", qPrintable(dataDir));
     }
-    const QString userInit = dataDir + "/init.dat";
-
-    const QString templateInit = "/opt/dispensa/bin/init.dat";
+    const QString userInit = QDir(dataDir).filePath("init.dat");
+    //const QString templateInit = "/opt/dispensa/bin/init.dat";
     //const QString templateInit = "/home/walter/GitHub/Dispensa/build/Desktop_Qt_6_9_3_Debug/init.dat";
 
     const bool primoAvvio = !QFile::exists(userInit);
     if (primoAvvio) {
-        if (!QFile::copy(templateInit, userInit)) {
-            qFatal("Impossibile copiare init.dat da %s a %s",
-                   qPrintable(templateInit), qPrintable(userInit));
+         if (!QFile::copy(":/init.dat", userInit)) {
+            qFatal("Impossibile copiare init.dat dalla risorsa alla cartella dati");
         }
+    }
+    if (!QFile::setPermissions(userInit,
+                               QFileDevice::ReadOwner | QFileDevice::WriteOwner)) {
+        qWarning() << "Impossibile impostare i permessi su" << userInit;
     }
     //QString currentExecDir(QCoreApplication::applicationDirPath());
     QFile file_i (userInit);
-    file_i.open(QIODevice::ReadOnly | QIODevice::Text);
+    if(!file_i.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning() << "impossibile aprire per la lettura:"
+                   << userInit << file_i.errorString();
+    }
     QTextStream in(&file_i);
     QString line = in.readLine();
     process_line(line);
