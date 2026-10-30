@@ -8,5 +8,6 @@
         <file>Immagini/Dispensa600.png</file>
         <file>Immagini/gplv3-84x42.png</file>
         <file>Immagini/logow 2.png</file>
+        <file>init.dat</file>
     </qresource>
 </RCC>

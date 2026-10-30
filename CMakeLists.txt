@@ -125,8 +125,21 @@ set_target_properties(Dispensa PROPERTIES
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
-    INSTALL_RPATH "$ORIGIN/../lib"
 )
+
+if(APPLE)
+    set_target_properties(Dispensa PROPERTIES
+        MACOSX_BUNDLE_GUI_IDENTIFIER "it.waltergiri.dispensa"
+    )
+endif()
+
+# RPATH per Linux; non applicare $ORIGIN a macOS o Windows.
+if(UNIX AND NOT APPLE)
+    set_target_properties(Dispensa PROPERTIES
+        INSTALL_RPATH "$ORIGIN/../lib"
+    )
+endif()
+
 
 
 include(GNUInstallDirs)
@@ -135,8 +148,8 @@ option(DISPENSA_DEPLOY_QT "Deploy Qt runtime dependencies" ON)
 
 install(TARGETS Dispensa
     BUNDLE DESTINATION .
-    LIBRARY DESTINATION lib
-    RUNTIME DESTINATION bin
+    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
+    LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
 )
 
 # Mantieni qui la destinazione solo se il programma si aspetta init.dat
@@ -145,6 +158,7 @@ install(FILES "${CMAKE_SOURCE_DIR}/init.dat"
     DESTINATION bin
 )
 
+if(UNIX AND NOT APPLE)
 install(FILES "${CMAKE_SOURCE_DIR}/packaging/dispensa.desktop"
     DESTINATION /usr/share/applications
 )
@@ -154,10 +168,18 @@ install(FILES "${CMAKE_SOURCE_DIR}/Dispensa.png"
     RENAME dispensa.png
 )
 
+# Copia iniziale: il programma dovrebbe copiarla nella cartella dati
+   # dell'utente al primo avvio, poi leggere/scrivere la copia dell'utente.
+   install(FILES "${CMAKE_SOURCE_DIR}/init.dat"
+       DESTINATION "${CMAKE_INSTALL_DATADIR}/dispensa"
+   )
+endif()
+
+
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(Dispensa)
 
-    if(DISPENSA_DEPLOY_QT)
+    if(DISPENSA_DEPLOY_QT AND Qt6_VERSION GREATER_EQUAL "6.3.0")
         qt_generate_deploy_app_script(
             TARGET Dispensa
             OUTPUT_SCRIPT deploy_script

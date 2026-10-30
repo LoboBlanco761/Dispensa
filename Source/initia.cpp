@@ -21,6 +21,7 @@
 #include "connessione.h"
 #include "datiini.h"
 #include <QStandardPaths>
+#include <QDir>
 
 Initia::Initia(QWidget *parent)
     : QDialog(parent)
@@ -48,16 +49,23 @@ void Initia::on_pushButton_2_clicked()
     db.close();
     const QString dataDir =
         QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-    const QString userInit = dataDir + "/init.dat";
+    const QString userInit = QDir(dataDir).filePath("init.dat");
     QString currentExecDir(QCoreApplication::applicationDirPath());
     if(ef == "y") {
         QFile file_i (userInit);
        // file_i.remove();
-        file_i.open(QIODevice::WriteOnly | QIODevice::Text);
+        if(!file_i.open(QIODevice::WriteOnly | QIODevice::Text)) {
+            qWarning()<< "impossibile aprire per la scrittura:"
+                       << userInit << file_i.errorString();
+            return;
+        }
         QTextStream out(&file_i);
         QString o = "Y";
         out<<o;
-        file_i.close();
+        if (out.status() !=QTextStream::Ok) {
+            qWarning() << "errore durante la scrittura di" << userInit;
+            }
+                file_i.close();
     }
     ui->pushButton_2->setEnabled(false);
     ui->progressBar->setMinimum(0);
