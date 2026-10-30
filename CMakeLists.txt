@@ -38,6 +38,14 @@ if(APPLE)
     list(APPEND PROJECT_SOURCES "${app_icon_macos}")
 endif()
 
+if(APPLE)
+    set(app_license "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+    set_source_files_properties("${app_license}"
+        PROPERTIES MACOSX_PACKAGE_LOCATION "."
+    )
+    list(APPEND PROJECT_SOURCES "${app_license}")
+endif()
+
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Dispensa
         MANUAL_FINALIZATION
