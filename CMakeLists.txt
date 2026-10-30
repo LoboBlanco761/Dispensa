@@ -27,6 +27,17 @@ set(PROJECT_SOURCES
         Source/mainwindow.ui
 )
 
+if(APPLE)
+    set(MACOSX_BUNDLE_ICON_FILE dispensa.icns)
+
+    set(app_icon_macos "${CMAKE_CURRENT_SOURCE_DIR}/Resources/dispensa.icns")
+    set_source_files_properties("${app_icon_macos}"
+        PROPERTIES MACOSX_PACKAGE_LOCATION "Resources"
+    )
+
+    list(APPEND PROJECT_SOURCES "${app_icon_macos}")
+endif()
+
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Dispensa
         MANUAL_FINALIZATION
