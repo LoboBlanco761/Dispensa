@@ -38,11 +38,19 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_DontUseNativeMenuBar);
     QTranslator translator;
 
-    // Lingua del sistema:
+#ifdef Q_OS_WIN
+    const QLocale locale = QLocale::system();
+
+    if (locale.language() != QLocale::Italian
+        && translator.load(locale, "Dispensa", "_", ":/i18n")) {
+        a.installTranslator(&translator);
+    }
+#else
+    //Lingua del sistema:
     if (translator.load(QLocale::system(), "Dispensa", "_", ":/i18n")) {
         a.installTranslator(&translator);
     }
-
+#endif
     /*if (translator.load(QLocale("ru"), "Dispensa", "_", ":/i18n")) {
         a.installTranslator(&translator);
     }*/
