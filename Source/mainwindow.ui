@@ -58,9 +58,8 @@
   </property>
   <property name="font">
    <font>
-    <family>Lucida Grande</family>
+    <family>Noto Sans</family>
     <pointsize>18</pointsize>
-    <bold>false</bold>
    </font>
   </property>
   <property name="windowTitle">
@@ -142,7 +141,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Lucida Grande</family>
+      <family>Noto Sans</family>
       <pointsize>36</pointsize>
       <bold>true</bold>
      </font>
@@ -187,7 +186,7 @@
       <widget class="QPushButton" name="pushButton">
        <property name="font">
         <font>
-         <family>Lucida Grande</family>
+         <family>Noto Sans</family>
          <pointsize>18</pointsize>
          <bold>true</bold>
         </font>
@@ -201,7 +200,7 @@
       <widget class="QPushButton" name="pushButton_2">
        <property name="font">
         <font>
-         <family>Lucida Grande</family>
+         <family>Noto Sans</family>
          <pointsize>18</pointsize>
          <bold>true</bold>
         </font>
@@ -215,7 +214,7 @@
       <widget class="QPushButton" name="pushButton_3">
        <property name="font">
         <font>
-         <family>Lucida Grande</family>
+         <family>Noto Sans</family>
          <pointsize>18</pointsize>
          <bold>true</bold>
         </font>
@@ -250,13 +249,13 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>27</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Sans Serif</family>
-     <pointsize>9</pointsize>
+     <family>Noto Sans</family>
+     <pointsize>12</pointsize>
      <italic>false</italic>
      <bold>false</bold>
     </font>

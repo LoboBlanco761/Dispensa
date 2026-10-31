@@ -89,6 +89,7 @@ CMakeLists.txt.user*
 /debian/dispensa/DEBIAN/triggers
 /debian/dispensa/opt/dispensa/bin/Dispensa
 /debian/dispensa/opt/dispensa/bin/init.*
+/debian/dispensa/opt/dispensa/share/doc/dispensa/LICENSE
 /debian/dispensa/usr/share/applications/dispensa.*
 /debian/dispensa/usr/share/doc/dispensa/changelog.Debian.gz
 /debian/dispensa/usr/share/icons/hicolor/256x256/apps/dispensa.png

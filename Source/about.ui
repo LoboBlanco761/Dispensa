@@ -58,7 +58,7 @@
   </property>
   <property name="font">
    <font>
-    <family>Lucida Grande</family>
+    <family>Noto Sans</family>
     <pointsize>18</pointsize>
    </font>
   </property>
@@ -140,9 +140,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Lucida Grande</family>
+     <family>Noto Sans</family>
      <pointsize>36</pointsize>
-     <bold>true</bold>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -218,7 +218,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Lucida Grande</family>
+     <family>Noto Sans</family>
      <pointsize>14</pointsize>
     </font>
    </property>

@@ -21,11 +21,15 @@
 #include <QSplashScreen>
 #include <QTimer>
 #include <QDir>
+#include <QFontDatabase>
 
 int main(int argc, char *argv[])
 {
     QCoreApplication::setApplicationName("Dispensa");
     QApplication a(argc, argv);
+
+    QFontDatabase::addApplicationFont(":/Fonts/NotoSans-Regular.ttf");
+    QFontDatabase::addApplicationFont(":/Fonts/NotoSans-Bold.ttf");
 
     const QString iconPath =
         QDir(QCoreApplication::applicationDirPath()).filePath("Dispensa.png");
