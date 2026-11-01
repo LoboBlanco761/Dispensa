@@ -35,7 +35,10 @@ int main(int argc, char *argv[])
         QDir(QCoreApplication::applicationDirPath()).filePath("Dispensa.png");
     a.setWindowIcon(QIcon(iconPath));
 
+#if defined(Q_OS_WIN) || defined(Q_OS_LINUX)
     QCoreApplication::setAttribute(Qt::AA_DontUseNativeMenuBar);
+#endif
+
     QTranslator translator;
 
 #ifdef Q_OS_WIN
@@ -51,9 +54,11 @@ int main(int argc, char *argv[])
         a.installTranslator(&translator);
     }
 #endif
+
     /*if (translator.load(QLocale("ru"), "Dispensa", "_", ":/i18n")) {
         a.installTranslator(&translator);
     }*/
+
     QString imagePath = (":/Immagini/Dispensa600.png");
     QPixmap pixmap(imagePath);
     QSplashScreen  splash(pixmap,  Qt :: WindowStaysOnTopHint);
