@@ -1,9 +1,18 @@
-Package: dispensa
-Version: 1.0.0
+Source: dispensa
 Section: utils
 Priority: optional
+Maintainer: Walter <waltgiri@proton.me>
+Build-Depends: debhelper-compat (= 13),
+               cmake,
+               qt6-base-dev,
+               qt6-multimedia-dev,
+               qt6-tools-dev,
+               qt6-tools-dev-tools
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: dispensa
 Architecture: amd64
-Maintainer: Walter <la-tua-email>
-Depends: libc6, libstdc++6
+Depends: ${shlibs:Depends}, ${misc:Depends}, libbz2-1.0, qt6-qpa-plugins, qt6-wayland
 Description: Applicazione Dispensa
- Applicazione desktop realizzata con Qt.
+ Applicazione desktop realizzata con Qt 6.
