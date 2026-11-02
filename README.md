@@ -34,7 +34,7 @@ Rumeno , Portoghese , Russo</b>
 
 ### Apple Mac
 1. Download 'Dispensa.dmg' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
-2. Monta e aperi il .dmg copia Dispensa.app in Applicazioni.
+2. Monta e apei il .dmg e copia Dispensa.app in Applicazioni.
 3. Avvia da Lauchpad.
 
 ### Windows 10 11
