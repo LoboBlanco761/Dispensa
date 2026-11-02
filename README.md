@@ -13,3 +13,7 @@
       <p align="center">
 <b>Lingue supportate: <br> Italiano , Inglese , Spagnolo , Francese , Tedesco , Greco , 
 Rumeno , Portoghese , Russo</b>
+</p>
+<p align="center">
+Disponibile per Linux , Mac e Windows
+</p>
