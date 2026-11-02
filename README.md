@@ -15,5 +15,11 @@
 Rumeno , Portoghese , Russo</b>
 </p>
 <p align="center">
-Disponibile per Linux , Mac e Windows
+ Disponibile per Linux , Mac e Windows
 </p>
+<br>
+<p align="center">
+  <b>Installazione</b>
+</p>
+
+### Debian e derivate
