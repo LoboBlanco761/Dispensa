@@ -31,3 +31,14 @@ Rumeno , Portoghese , Russo</b>
 1. Download 'dispensa_1.0-2.x86_64.rpm' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
 2.  Esegui  `sudo dnf install ./dispensa_1.0-2.x86_64.rpm` nella cartella dove hai scaricato.
 3.  Avvia da Laucher Dispensa.
+
+### Apple Mac
+1. Download 'Dispensa.dmg' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
+2. Monta e aperi il .dmg copia Dispensa.app in Applicazioni.
+3. Avvia da Lauchpad.
+
+### Windows 10 11
+1. Download 'DispensaInstaller.exe' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
+2. Lancia l'installer , rispondi si alla richiesta di autorizzaione accetta la licenza e installa.
+3. Avvia da Start o dall'icona sul Desktop.
+
