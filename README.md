@@ -25,4 +25,9 @@ Rumeno , Portoghese , Russo</b>
 ### Debian e derivate
 1. Download 'dispensa_1.0-1_amd64.deb' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
 2.  Esegui  `sudo apt install ./dispensa_1.0-1_amd64.deb` nella cartella dove hai scaricato.
-3.  Avvia da Laucher Disoensa.
+3.  Avvia da Laucher Dispensa.
+
+### Fedora
+1. Download 'dispensa_1.0-2.x86_64.rpm' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
+2.  Esegui  `sudo dnf install ./dispensa_1.0-2.x86_64.rpm` nella cartella dove hai scaricato.
+3.  Avvia da Laucher Dispensa.
