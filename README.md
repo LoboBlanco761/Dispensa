@@ -23,3 +23,4 @@ Rumeno , Portoghese , Russo</b>
 </p>
 
 ### Debian e derivate
+1. Download 'dispensa_1.0-1_amd64.deb' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
