@@ -12,7 +12,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Dispensa.  If not, see <http://www.gnu.org/licenses/>.
+    along with Dispensa.  If not, see <http://www.gnu.org/licenses/>
 */
 #include "mainwindow.h"
 
@@ -41,13 +41,17 @@ int main(int argc, char *argv[])
 
     QTranslator translator;
 
-#ifdef Q_OS_WIN
-    const QLocale locale = QLocale::system();
+//#ifdef Q_OS_WIN
+    /*    const QLocale locale = QLocale::system();
 
     if (locale.language() != QLocale::Italian
         && translator.load(locale, "Dispensa", "_", ":/i18n")) {
         a.installTranslator(&translator);
-    }
+    }*/
+#ifdef Q_OS_WIN
+    const QLocale locale = QLocale::system().uiLanguages();
+    if (translator.load(locale, "Dispensa", "_", ":/i18n")) {
+        a.installTranslator(&translator);
 #else
     //Lingua del sistema:
     if (translator.load(QLocale::system(), "Dispensa", "_", ":/i18n")) {
