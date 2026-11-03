@@ -41,17 +41,10 @@ int main(int argc, char *argv[])
 
     QTranslator translator;
 
-//#ifdef Q_OS_WIN
-    /*    const QLocale locale = QLocale::system();
 
-    if (locale.language() != QLocale::Italian
-        && translator.load(locale, "Dispensa", "_", ":/i18n")) {
-        a.installTranslator(&translator);
-    }*/
 #ifdef Q_OS_WIN
     const QStringList languages = QLocale::system().uiLanguages();
     const QLocale locale(languages.isEmpty() ? QStringLiteral("it") : languages.first());
-    //qDebug() << "lingue ui : " <<QLocale::system().uiLanguages();
     if (translator.load(locale, "Dispensa", "_", ":/i18n")) {
         a.installTranslator(&translator);
     }
