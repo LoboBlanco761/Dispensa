@@ -33,10 +33,9 @@ Rumeno , Portoghese , Russo</b>
 3.  Avvia da Laucher Dispensa.
    
 ### AppImage (Linux x86_64)
-
-    Scarica `Dispensa-x86_64.AppImage` dalla [pagina delle release di Dispensa](https://github.com/LoboBlanco761/Dispensa/releases).
-    Rendi il file eseguibile: `chmod +x Dispensa-x86_64.AppImage`.
-    Avvialo con `./Dispensa-x86_64.AppImage` oppure con un doppio clic.
+1. Scarica `Dispensa-x86_64.AppImage` da [Dispensa releases page](https://github.com/LoboBlanco761/Dispensa/releases).
+3. Rendi il file eseguibile: `chmod +x Dispensa-x86_64.AppImage`.
+3. Avvialo con `./Dispensa-x86_64.AppImage` oppure con un doppio clic.
 
 
 ### Apple Mac
