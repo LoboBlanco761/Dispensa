@@ -8,7 +8,7 @@
       <img src="https://github.com/LoboBlanco761/Dispensa/blob/master/Immagini/Dispensa600.png" width="600">
     </p>
      <p align="center">
-<b>utilizzo del linguaggio C++ con framework QT</b>
+<b>utilizzo del linguaggio C++ con framework QT 6.9.3</b>
      </p>
       <p align="center">
 <b>Lingue supportate: <br> Italiano , Inglese , Spagnolo , Francese , Tedesco , Greco , 
