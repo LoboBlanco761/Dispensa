@@ -20,20 +20,16 @@
 #include "visualizza.h"
 #include "gestione.h"
 #include <QFile>
-#include "initia.h"
 #include "situazdisp.h"
 #include "about.h"
 #include "listaspesa.h"
 #include "tools.h"
-#include <QStandardPaths>
-#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    testInit();
     settaImg();
 }
 
@@ -43,58 +39,10 @@ MainWindow::~MainWindow()
 }
 
 
-static void process_line(const QByteArray &)
-{
-}
-static void process_line(const QString &)
-{
-}
-
 void MainWindow::settaImg()
 {
     QString currentExecDir(QCoreApplication::applicationDirPath());
     ui->label_2->setPixmap(QPixmap(":/Immagini/Dispensa256.png"));
-}
-
-void MainWindow::testInit()
-{
-    const QString dataDir =
-        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
-
-    if (!QDir().mkpath(dataDir)) {
-        qFatal("Impossibile creare la cartella dati: %s", qPrintable(dataDir));
-    }
-    const QString userInit = QDir(dataDir).filePath("init.dat");
-
-    //const QString templateInit = "/opt/dispensa/bin/init.dat";
-    //const QString templateInit = "/home/walter/GitHub/Dispensa/build/Desktop_Qt_6_9_3_Debug/init.dat";
-
-    const bool primoAvvio = !QFile::exists(userInit);
-    if (primoAvvio) {
-        if (!QFile::copy(":/init.dat", userInit)) {
-            qFatal("Impossibile copiare init.dat");
-        }
-    }
-    if (!QFile::setPermissions(userInit,
-                               QFileDevice::ReadOwner | QFileDevice::WriteOwner)) {
-        qWarning() << "Impossibile impostare i permessi su" << userInit;
-    }
-    //QString currentExecDir(QCoreApplication::applicationDirPath());
-    QFile file_i (userInit);
-    if(!file_i.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning()<< "impossibile aprire per la lettura:"
-                   << userInit << file_i.errorString();
-        return;
-    }
-    QTextStream in(&file_i);
-    QString line = in.readLine();
-    process_line(line);
-    file_i.close();
-    if(line == "N") {
-        Initia *i = new Initia();
-        i->setAttribute(Qt::WA_DeleteOnClose);
-        i->exec();
-    }
 }
 
 

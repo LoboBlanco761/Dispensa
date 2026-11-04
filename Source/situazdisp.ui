@@ -284,6 +284,9 @@
      <height>251</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(153, 102, 0);</string>
+   </property>
    <attribute name="horizontalHeaderMinimumSectionSize">
     <number>40</number>
    </attribute>

@@ -22,7 +22,15 @@
 #include <QTimer>
 #include <QDir>
 #include <QFontDatabase>
+#include <QStandardPaths>
+#include "initia.h"
 
+static void process_line(const QByteArray &)
+{
+}
+static void process_line(const QString &)
+{
+}
 int main(int argc, char *argv[])
 {
     QCoreApplication::setApplicationName("Dispensa");
@@ -64,11 +72,52 @@ int main(int argc, char *argv[])
     QSplashScreen  splash(pixmap,  Qt :: WindowStaysOnTopHint);
     splash.show();
 
+    QElapsedTimer timer;
+    timer.start();
+    QString ef = "y";
+    const QString dataDir =
+        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+
+    if (!QDir().mkpath(dataDir)) {
+        qFatal("Impossibile creare la cartella dati: %s", qPrintable(dataDir));
+    }
+    const QString userInit = QDir(dataDir).filePath("init.dat");
+
+    const bool primoAvvio = !QFile::exists(userInit);
+    if (primoAvvio) {
+        if (!QFile::copy(":/init.dat", userInit)) {
+            qFatal("Impossibile copiare init.dat");
+        }
+    }
+
+    if (!QFile::setPermissions(userInit,
+                               QFileDevice::ReadOwner | QFileDevice::WriteOwner)) {
+        qWarning() << "Impossibile impostare i permessi su" << userInit;
+    }
+
+    QFile file_i (userInit);
+    if(!file_i.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qWarning()<< "impossibile aprire per la lettura:"
+                   << userInit << file_i.errorString();
+    }
+    QTextStream in(&file_i);
+    QString line = in.readLine();
+    process_line(line);
+    file_i.close();
+    if(line == "N") {
+        ef = "n";
+    }
     MainWindow w;
     splash.activateWindow();
-    QTimer::singleShot(5000, [&splash, &w]() {
-        w.show();
-        splash.finish(&w);
-    });
+    while (timer.elapsed() < 5000) {
+        a.processEvents(QEventLoop::AllEvents,50);
+    }
+    splash.finish(&w);
+    if (ef == "n") {
+        Initia *i = new Initia();
+        i->setAttribute(Qt::WA_DeleteOnClose);
+        i->exec();
+    }
+    w.show();
     return a.exec();
 }
