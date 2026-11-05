@@ -82,3 +82,19 @@ Dalla cartella principale del progetto:
 cmake -S . -B build -DCMAKE\_PREFIX\_PATH="/percorso/dell'installazione/Qt/6.9.3/<kit>"
 cmake --build build --config Release
 cmake --install build --config Release --prefix dist
+
+### Creare il pacchetto Arch Linux
+
+1. Installa gli strumenti di compilazione:
+
+   ```bash
+   sudo pacman -S --needed base-devel cmake ninja qt6-base qt6-multimedia qt6-tools
+2. Apri il repository GitHub e scegli Code → Download ZIP.
+3. Estrai lo ZIP. Nella cartella estratta dovresti trovare packaging/arch/PKGBUILD e packaging/arch/dispensa.desktop.
+
+4. Copia lo ZIP scaricato dentro packaging/arch/ e rinominalo esattamente Dispensa-master.zip.
+
+5 Apri un terminale nella cartella packaging/arch/ ed esegui: makepkg -si
+ nota: 
+La copia dello ZIP è importante perché il tuo PKGBUILD si aspetta di trovarlo accanto a sé.
+
