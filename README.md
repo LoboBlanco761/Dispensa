@@ -8,7 +8,7 @@
       <img src="https://github.com/LoboBlanco761/Dispensa/blob/master/Immagini/Dispensa600.png" width="600">
     </p>
      <p align="center">
-<b>utilizzo del linguaggio C++ con framework QT</b>
+<b>utilizzo del linguaggio C++ con framework QT 6.9.3</b>
      </p>
       <p align="center">
 <b>Lingue supportate: <br> Italiano , Inglese , Spagnolo , Francese , Tedesco , Greco , 
@@ -31,6 +31,12 @@ Rumeno , Portoghese , Russo</b>
 1. Download 'dispensa_1.0-2.x86_64.rpm' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
 2.  Esegui  `sudo dnf install ./dispensa_1.0-2.x86_64.rpm` nella cartella dove hai scaricato.
 3.  Avvia da Laucher Dispensa.
+   
+### AppImage (Linux x86_64)
+1. Scarica `Dispensa-x86_64.AppImage` da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
+3. Rendi il file eseguibile: `chmod +x Dispensa-x86_64.AppImage`.
+3. Avvialo con `./Dispensa-x86_64.AppImage` oppure con un doppio clic.
+
 
 ### Apple Mac
 1. Download 'Dispensa.dmg' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
