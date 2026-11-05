@@ -74,15 +74,6 @@ Installa Qt 6.9.3 con Qt Online Installer e seleziona i componenti necessari per
 3. Configura il progetto, seleziona la configurazione **Release** e compila.
 4. Per creare una cartella distribuibile, esegui anche il passaggio **Install** di CMake.
 
-### Da terminale
-
-Dalla cartella principale del progetto:
-
-```sh
-cmake -S . -B build -DCMAKE\_PREFIX\_PATH="/percorso/dell'installazione/Qt/6.9.3/<kit>"
-cmake --build build --config Release
-cmake --install build --config Release --prefix dist
-
 ### Creare pacchetto per ArchLinux
 
 1. Installa gli strumenti di compilazione:
@@ -97,4 +88,14 @@ cmake --install build --config Release --prefix dist
 5 Apri un terminale nella cartella packaging/arch/ ed esegui: makepkg -si
  nota: 
 La copia dello ZIP è importante perché il tuo PKGBUILD si aspetta di trovarlo accanto a sé.
+
+
+### Da terminale
+
+Dalla cartella principale del progetto:
+
+```sh
+cmake -S . -B build -DCMAKE\_PREFIX\_PATH="/percorso/dell'installazione/Qt/6.9.3/<kit>"
+cmake --build build --config Release
+cmake --install build --config Release --prefix dist
 
