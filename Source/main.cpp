@@ -23,6 +23,7 @@
 #include <QDir>
 #include <QFontDatabase>
 #include <QStandardPaths>
+#include <QElapsedTimer>
 #include "initia.h"
 
 static void process_line(const QByteArray &)
