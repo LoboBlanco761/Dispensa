@@ -31,11 +31,20 @@ Rumeno , Portoghese , Russo</b>
 1. Download 'dispensa_1.0-2.x86_64.rpm' da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
 2.  Esegui  `sudo dnf install ./dispensa_1.0-2.x86_64.rpm` nella cartella dove hai scaricato.
 3.  Avvia da Laucher Dispensa.
-   
+
+### Arch Linux e derivate (x86_64)
+
+1. Scarica `dispensa-0.1.0-1-x86_64.pkg.tar.zst` dalla [pagina delle release di Dispensa](https://github.com/LoboBlanco761/Dispensa/releases).
+2. Apri un terminale nella cartella in cui hai scaricato il file ed esegui:
+
+   ```bash
+   sudo pacman -U ./dispensa-0.1.0-1-x86\_64.pkg.tar.zst
+
 ### AppImage (Linux x86_64)
 1. Scarica `Dispensa-x86_64.AppImage` da [Dispensa releases page] (https://github.com/LoboBlanco761/Dispensa/releases).
 3. Rendi il file eseguibile: `chmod +x Dispensa-x86_64.AppImage`.
 3. Avvialo con `./Dispensa-x86_64.AppImage` oppure con un doppio clic.
+4. Per rimuoverlo: sudo pacman -R dispensa
 
 
 ### Apple Mac
