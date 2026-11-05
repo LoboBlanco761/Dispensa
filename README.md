@@ -83,7 +83,7 @@ cmake -S . -B build -DCMAKE\_PREFIX\_PATH="/percorso/dell'installazione/Qt/6.9.3
 cmake --build build --config Release
 cmake --install build --config Release --prefix dist
 
-### Creare il pacchetto Arch Linux
+### Creare pacchetto per ArchLinux
 
 1. Installa gli strumenti di compilazione:
 
