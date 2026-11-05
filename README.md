@@ -86,6 +86,7 @@ Installa Qt 6.9.3 con Qt Online Installer e seleziona i componenti necessari per
 4. Copia lo ZIP scaricato dentro packaging/arch/ e rinominalo esattamente Dispensa-master.zip.
 
 5 Apri un terminale nella cartella packaging/arch/ ed esegui: makepkg -si
+
  nota: 
 La copia dello ZIP è importante perché il tuo PKGBUILD si aspetta di trovarlo accanto a sé.
 
