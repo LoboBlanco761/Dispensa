@@ -1,0 +1,29 @@
+pkgname=dispensa
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Applicazione per la gestione delle dispense"
+arch=('x86_64')
+url=""
+license=('custom')
+depends=('qt6-base' 'qt6-multimedia')
+makedepends=('cmake' 'ninja' 'qt6-tools')
+source=('Dispensa-master.zip' 'dispensa.desktop')
+sha256sums=(
+  'b9ba9c0c5b7eca03478f17a9b86b839b6446e0fa8c2acff053812ce927ba21df'
+  'f09997d2020b0a9ab8b558605433476ffb53616c25368023cc30a814e5b796c8'
+)
+
+build() {
+  cmake -S "$srcdir/Dispensa-master" -B build -G Ninja \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib \
+    -DCMAKE_BUILD_TYPE=None
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+
+  install -Dm644 "$srcdir/dispensa.desktop" \
+    "$pkgdir/usr/share/applications/dispensa.desktop"
+}
